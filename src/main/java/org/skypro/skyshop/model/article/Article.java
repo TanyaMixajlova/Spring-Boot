@@ -20,18 +20,7 @@ public class Article implements Searchable {
     @Override
     public UUID getId(){return this.id; }
 
-    @JsonIgnore
-    @Override
-    public String getSearchTerm() {
-        return "";
-    }
-    @JsonIgnore
-    @Override
-    public String getContentType() {
-        return "";
-    }
-
-    @Override
+        @Override
     public String toString() {
         return this.titleArticle + "\n" + this.textArticle;
     }
@@ -50,14 +39,14 @@ public class Article implements Searchable {
 
     @JsonIgnore
     @Override
-    public String searchTerm(){
+    public String getSearchTerm(){
         return titleArticle + textArticle;
     };
 
 
     @Override
     @JsonIgnore
-    public String contentType() {
+    public String getContentType() {
         return "ARTICLE";
     }
 

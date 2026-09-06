@@ -5,11 +5,11 @@ import org.skypro.skyshop.model.product.DiscountedProduct;
 import org.skypro.skyshop.model.product.FixPriceProduct;
 import org.skypro.skyshop.model.product.Product;
 import org.skypro.skyshop.model.product.SimpleProduct;
-import org.skypro.skyshop.model.search.SearchResult;
 import org.skypro.skyshop.model.search.Searchable;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public abstract class StorageService {
@@ -17,7 +17,6 @@ public abstract class StorageService {
     private final Map<UUID, Article> mapArticle = new HashMap<>();
 
     public StorageService() {
-        // Здесь можешь добавить тестовые данные
         addingProducts();
         addingArticles();
     }
@@ -47,7 +46,4 @@ public abstract class StorageService {
         return searchables;
     }
 
-    search (String element);
-
-    return SearchResult
 }

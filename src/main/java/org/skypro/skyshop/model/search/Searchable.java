@@ -4,15 +4,12 @@ import java.util.UUID;
 
 public interface Searchable {
     String getName();
-    String searchTerm();
-    String contentType();
+    String getSearchTerm();
+    @JsonIgnore
+    String getContentType();
     default String getStringRepresentation() {
-        return searchTerm() + " - " + contentType();
+        return getSearchTerm() + " - " + getContentType();
     }
     UUID getId();
 
-    String getSearchTerm();
-
-    @JsonIgnore
-    String getContentType();
 }
