@@ -48,6 +48,5 @@ public abstract class StorageService {
     }
 
     search (String element);
-
     return SearchResult
 }
