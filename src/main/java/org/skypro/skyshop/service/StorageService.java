@@ -12,7 +12,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-public abstract class StorageService {
+public class StorageService {
     private final Map<UUID, Product> mapProduct = new HashMap<>();
     private final Map<UUID, Article> mapArticle = new HashMap<>();
 

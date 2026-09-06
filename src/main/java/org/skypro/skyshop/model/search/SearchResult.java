@@ -13,9 +13,22 @@ public class SearchResult {
         this.contentType = contentType;
     }
 
+    public String getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getContentType() {
+        return contentType;
+    }
+
+    @Override
+    public String toString() {
+        return "id: " + id + ", name: " + name + ", contentType: " + contentType;
+    }
     public static SearchResult fromSearchable(Searchable searchables) {
         return new SearchResult(searchables.getId().toString(), searchables.getName(), searchables.getContentType());
     }
-
 
 }
