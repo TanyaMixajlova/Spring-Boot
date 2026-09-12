@@ -25,4 +25,5 @@ public class SearchService {
                 .map(SearchResult::fromSearchable) // преобразуем в SearchResult
                 .collect(Collectors.toList()); // собираем в список
     }
+
 }
