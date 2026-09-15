@@ -28,9 +28,13 @@ public class StorageService {
     }
 
     public void addingProducts() {
-        mapProduct.put(UUID.randomUUID(), new SimpleProduct("яблоки красные", 150, UUID.randomUUID()));
-        mapProduct.put(UUID.randomUUID(), new DiscountedProduct("яблоки зеленые", 200, (byte) 20, UUID.randomUUID()));
-        mapProduct.put(UUID.randomUUID(), new FixPriceProduct("молоко" , UUID.randomUUID()));
+        Product redApples = new SimpleProduct("яблоки красные", 150, UUID.randomUUID());
+        Product greenApples = new DiscountedProduct("яблоки зеленые", 200, (byte) 20, UUID.randomUUID());
+        Product milk = new FixPriceProduct("молоко", UUID.randomUUID());
+
+        mapProduct.put(redApples.getId(), redApples);
+        mapProduct.put(greenApples.getId(), greenApples);
+        mapProduct.put(milk.getId(), milk);
     }
 
     public void addingArticles() {
