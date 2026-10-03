@@ -16,13 +16,8 @@ public class SearchService {
     public Collection<SearchResult> search(String element) {
         return storageService.getAllCollection().stream()
                 .filter(searchable -> searchable.getName().contains(element)) // фильтруем по строке поиска
-                // проверка вывода добавления
-                //.filter(searchable -> {
-                //   boolean match = searchable.getName().contains(element);
-                //  System.out.println("Checking " + searchable.getName() + ": " + match);
-                // return match;
-                //})
                 .map(SearchResult::fromSearchable) // преобразуем в SearchResult
                 .collect(Collectors.toList()); // собираем в список
     }
+
 }
