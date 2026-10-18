@@ -31,7 +31,6 @@ public class BasketService {
         Product product = (storageService.getProductById(id)).orElseThrow(NoSuchProductException::new);
         productBasket.addProduct(id);
     }
-
     //public List<BasketItem> getBasketItems() {
     //    return productBasket.getBasketStream()
     //            .map(entry -> {
