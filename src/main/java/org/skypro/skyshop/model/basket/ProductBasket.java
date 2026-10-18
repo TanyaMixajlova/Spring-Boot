@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 public class ProductBasket {
     private final Map<UUID, Integer> basket = new HashMap<>();
 
-    //добавляем продукт
+    //добавляем продукт в содержание создаем карточку продукта
     public void addProduct(UUID id) {
         basket.computeIfAbsent(id, k -> {
             int currentValue = basket.getOrDefault(k, 0);

@@ -2,7 +2,7 @@ package org.skypro.skyshop.model.basket;
 import java.util.List;
 
 public final class UserBasket {
-    private final List<BasketItem> basketWithTotal;
+    private final List<BasketItem> basketWithTotal;// добавить в корзину конкретного пользователя
     private int total;
 
     public UserBasket(List<BasketItem> basketWithTotal) {
@@ -18,4 +18,5 @@ public final class UserBasket {
     public double getTotal() {
         return total;
     }
+
 }
