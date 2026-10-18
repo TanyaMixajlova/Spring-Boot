@@ -38,7 +38,7 @@ public class StorageService {
     }
 
     public void addingArticles() {
-        mapArticle.put(UUID.randomUUID(), new Article("Питон язык программирования и Java язык программирования ", "Полиморфиз и интерфейсы", UUID.randomUUID()));
+        mapArticle.put(UUID.randomUUID(), new Article("Питон язык программирования и Java язык программирования ", "Полиморфизм и интерфейсы", UUID.randomUUID()));
         mapArticle.put(UUID.randomUUID(), new Article("си язык программирования ", "Текст статьи 2", UUID.randomUUID()));
         mapArticle.put(UUID.randomUUID(), new Article("си++ язык программирования ", "Текст статьи 3", UUID.randomUUID()));
     }
