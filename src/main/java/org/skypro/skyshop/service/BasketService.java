@@ -35,8 +35,8 @@ public class BasketService {
     //    return productBasket.getBasketStream()
     //            .map(entry -> {
     //               Product product = storageService.getProductById(entry.getKey())
-    //                       .orElseThrow(() -> new IllegalArgumentException("Product not found"));
-    //               return new BasketItem(product, entry.getValue());
+    //                       .orElseThrow(() -> new IllegalArgumentException("Product not found")); return new
+    //               BasketItem(product, entry.getValue());
     //            })
     //            .collect(Collectors.toList());
    // }
