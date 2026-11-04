@@ -22,7 +22,5 @@ public class ProductBasket {
     public Map<UUID, Integer>  getProductContents(){
         return Collections.unmodifiableMap(basket);
     }
-    //public Stream<Map.Entry<UUID, Integer>> getBasketStream() {
-    //    return basket.entrySet().stream();
-    // }
+
 }
