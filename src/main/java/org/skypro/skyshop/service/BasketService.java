@@ -28,18 +28,9 @@ public class BasketService {
     //добавляем продукт
     public void addSearchProduct(UUID id) {
         storageService.getProductById(id);
-        Product product = (storageService.getProductById(id)).orElseThrow(NoSuchProductException::new);
+        Product product = (storageService.getProductById(id)).orElseThrow(() -> new IllegalArgumentException("Товар не найден"));
         productBasket.addProduct(id);
     }
-    //public List<BasketItem> getBasketItems() {
-    //    return productBasket.getBasketStream()
-    //            .map(entry -> {
-    //               Product product = storageService.getProductById(entry.getKey())
-    //                       .orElseThrow(() -> new IllegalArgumentException("Product not found"));
-    //               return new BasketItem(product, entry.getValue());
-    //            })
-    //            .collect(Collectors.toList());
-   // }
 
     public UserBasket getUserBasket() {
         Map<UUID, Integer> contents = productBasket.getProductContents();
